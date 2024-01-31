@@ -9,14 +9,18 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#DCF3DC07"
         android:padding="16dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
         <Button
             android:id="@+id/button_assignment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/purple"
             android:text="@string/button_assignment"
             app:layout_constraintBottom_toTopOf="@+id/button_todo"
             app:layout_constraintEnd_toEndOf="parent"
@@ -25,9 +29,13 @@
 
         <Button
             android:id="@+id/button_exam"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#8D4302F4"
             android:text="@string/button_exam"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/button_class"
             app:layout_constraintEnd_toStartOf="@+id/button_assignment"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,22 +44,45 @@
 
         <Button
             android:id="@+id/button_class"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/purple"
             android:text="@string/button_class"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button_todo"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_exam" />
+            app:layout_constraintTop_toBottomOf="@+id/button_exam"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/button_todo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/purple"
             android:text="@string/button_todo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/button_class"
             app:layout_constraintTop_toBottomOf="@+id/button_assignment" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/fragment1_toolbar"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/first_fragment_toolbar"
+            app:titleMargin="4dp"
+            app:titleMarginStart="135dp"
+            app:titleTextColor="@color/white" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
