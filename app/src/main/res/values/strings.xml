@@ -6,7 +6,7 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="first_fragment_toolbar">Class Manager</string>
     <string name="button_assignment">Assignment</string>
-    <string name="previous">Previous</string>
+    <string name="previous">Back</string>
     <string name="button_todo">To Do</string>
     <string name="button_class">Class</string>
     <string name="button_exam">Exam</string>

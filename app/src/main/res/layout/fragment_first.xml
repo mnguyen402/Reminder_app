@@ -69,6 +69,8 @@
             app:layout_constraintStart_toEndOf="@+id/button_class"
             app:layout_constraintTop_toBottomOf="@+id/button_assignment" />
 
+
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/fragment1_toolbar"
             android:layout_width="409dp"
@@ -84,5 +86,9 @@
             app:titleMarginStart="135dp"
             app:titleTextColor="@color/white" />
 
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
