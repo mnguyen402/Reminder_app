@@ -37,6 +37,12 @@ public class SecondFragment extends Fragment {
                         .navigate(R.id.action_SecondFragment_to_FirstFragment);
             }
         });
+        binding.fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AddNewAssignment.newInstance().show(getParentFragmentManager() ,AddNewAssignment.TAG);
+            }
+        });
     }
 
     @Override

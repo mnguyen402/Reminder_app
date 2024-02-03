@@ -15,8 +15,11 @@ import android.util.Log;
 import android.view.View;
 
 import androidx.core.view.WindowCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.recyclerview.widget.ItemTouchHelper;
@@ -27,6 +30,7 @@ import com.example.remider_app.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
 
     private AssignmentAdapter varAssignmentAdapter;
     private FloatingActionButton fab2;
+    private Button ButtonSecond;
     private List<AssignmentModel> assignmentList;
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
@@ -44,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_second);
+        setContentView(R.layout.activity_main);
 
         db = new DatabaseHandler(this);
         db.openDatabase();
@@ -61,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
         itemTouchHelper.attachToRecyclerView(assignmentRecyclerView);
 
         fab2 = findViewById(R.id.fab2);
-
+        ButtonSecond = findViewById(R.id.button_second);
 
 
 
@@ -69,12 +74,6 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
         Collections.reverse(assignmentList);
         varAssignmentAdapter.setAssignment(assignmentList);
 
-        fab2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AddNewAssignment.newInstance().show(getSupportFragmentManager(),AddNewAssignment.TAG);
-            }
-        });
     }
 
     @Override
