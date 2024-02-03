@@ -20,8 +20,6 @@ import com.example.remider_app.Model.AssignmentModel;
 import com.example.remider_app.Utils.DatabaseHandler;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
-import java.util.Objects;
-
 public class AddNewAssignment extends BottomSheetDialogFragment {
 
     public static final String TAG = "ActionBottomDialog";

@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.remider_app.databinding.FragmentFirstBinding;
 import com.example.remider_app.databinding.FragmentSecondBinding;
 
 public class SecondFragment extends Fragment {

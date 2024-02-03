@@ -10,4 +10,10 @@
     <string name="button_todo">To Do</string>
     <string name="button_class">Class</string>
     <string name="button_exam">Exam</string>
+    <string name="textview_title">title</string>
+    <string name="textview_due_date">date</string>
+    <string name="textview_class">class</string>
+    <string name="edittext_assignment">new assignment</string>
+    <string name="edittext_date">month/date/year</string>
+    <string name="edittext_class">class</string>
 </resources>

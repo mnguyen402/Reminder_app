@@ -1,25 +1,91 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="400sp"
     android:padding="16dp">
 
     <EditText
         android:id="@+id/newAssignmentText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        
+        android:layout_width="225dp"
+        android:layout_height="61dp"
+
+        android:hint="New Assignment"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:hint="New Assignment"/>
+        app:layout_constraintBottom_toTopOf="@+id/editTextDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textview_title"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/newAssignmentButton"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+
+        android:text="ADD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/newAssignmentText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="19dp"
-        android:text = "ADD"
+        android:text="@string/textview_title"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_date"
+        app:layout_constraintEnd_toStartOf="@+id/newAssignmentText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        />
+    <TextView
+        android:id="@+id/textView_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="@string/textview_due_date"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textview_class"
+        app:layout_constraintEnd_toStartOf="@+id/editTextDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_title" />
 
-</RelativeLayout>
+    <EditText
+        android:id="@+id/newClasstext"
+        android:layout_width="225sp"
+        android:layout_height="61sp"
+        android:layout_marginBottom="100dp"
+        android:ems="10"
+        android:hint="@string/edittext_class"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textview_class"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
+    <TextView
+        android:id="@+id/textview_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="@string/textview_class"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/newClasstext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_date" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="225sp"
+        android:layout_height="61sp"
+        android:ems="10"
+        android:hint="@string/edittext_date"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/newClasstext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_date"
+        app:layout_constraintTop_toBottomOf="@+id/newAssignmentText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
