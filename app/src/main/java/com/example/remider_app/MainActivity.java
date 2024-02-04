@@ -70,14 +70,18 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
         itemTouchHelper.attachToRecyclerView(assignmentRecyclerView);
 
         fab2 = findViewById(R.id.fab2);
-        ButtonSecond = findViewById(R.id.button_second);
-
 
 
         assignmentList = db.getAllAssignments();
         Collections.reverse(assignmentList);
         varAssignmentAdapter.setAssignment(assignmentList);
 
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AddNewAssignment.newInstance().show(getSupportFragmentManager() ,AddNewAssignment.TAG);
+            }
+        });
     }
 
     @Override

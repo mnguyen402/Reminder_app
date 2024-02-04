@@ -24,11 +24,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.remider_app.databinding.FragmentFourthBinding;
 import com.example.remider_app.databinding.FragmentSecondBinding;
 
 public class fragment_fourth extends Fragment {
 
-    private FragmentSecondBinding binding;
+    private FragmentFourthBinding binding;
 
     @Override
     public View onCreateView(
@@ -36,7 +37,7 @@ public class fragment_fourth extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentSecondBinding.inflate(inflater, container, false);
+        binding = FragmentFourthBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -44,17 +45,11 @@ public class fragment_fourth extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
+        binding.buttonFourth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController( fragment_fourth.this)
                         .navigate(R.id.action_Fourth_Fragment_to_FirstFragment);
-            }
-        });
-        binding.fab2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AddNewAssignment.newInstance().show(getParentFragmentManager() ,AddNewAssignment.TAG);
             }
         });
     }

@@ -11,11 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.remider_app.databinding.FragmentFifthBinding;
 import com.example.remider_app.databinding.FragmentSecondBinding;
 
 public class fragment_fifth extends Fragment {
 
-    private FragmentSecondBinding binding;
+    private FragmentFifthBinding binding;
 
     @Override
     public View onCreateView(
@@ -23,7 +24,7 @@ public class fragment_fifth extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentSecondBinding.inflate(inflater, container, false);
+        binding = FragmentFifthBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -38,12 +39,7 @@ public class fragment_fifth extends Fragment {
                         .navigate(R.id.action_Fifth_Fragment_to_FirstFragment);
             }
         });
-        binding.fab2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AddNewAssignment.newInstance().show(getParentFragmentManager() ,AddNewAssignment.TAG);
-            }
-        });
+
     }
 
     @Override
