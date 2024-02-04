@@ -14,6 +14,15 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_ThirdFragment"
+            app:destination="@id/fragment_third" />
+        <action
+            android:id="@+id/action_FirstFragment_to_FourthFragment"
+            app:destination="@id/fragment_fourth" />
+        <action
+            android:id="@+id/action_FirstFragment_to_FifthFragment"
+            app:destination="@id/fragment_fifth" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -23,6 +32,36 @@
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_third"
+        android:name="com.example.remider_app.fragment_third"
+        android:label="Third Fragment"
+        tools:layout="@layout/fragment_third">
+
+        <action
+            android:id="@+id/action_Third_Fragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_fourth"
+        android:name="com.example.remider_app.fragment_fourth"
+        android:label="Fourth Fragment"
+        tools:layout="@layout/fragment_fourth">
+
+        <action
+            android:id="@+id/action_Fourth_Fragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_fifth"
+        android:name="com.example.remider_app.fragment_fifth"
+        android:label="Fifth Fragment"
+        tools:layout="@layout/fragment_fifth">
+
+        <action
+            android:id="@+id/action_Fifth_Fragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

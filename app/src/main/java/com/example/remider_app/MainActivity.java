@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.example.remider_app.Adapter.AssignmentAdapter;
 import com.example.remider_app.Model.AssignmentModel;
 import com.example.remider_app.Utils.DatabaseHandler;
+import com.example.remider_app.databinding.FragmentFirstBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -17,6 +18,8 @@ import android.view.View;
 import androidx.core.view.WindowCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
@@ -43,19 +46,20 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
     private Button ButtonSecond;
     private List<AssignmentModel> assignmentList;
     private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
     private DatabaseHandler db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         db = new DatabaseHandler(this);
         db.openDatabase();
 
-        assignmentList = new ArrayList<>();
 
+        assignmentList = new ArrayList<>();
         RecyclerView assignmentRecyclerView = findViewById(R.id.assignmentRecyclerView);
         assignmentRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         varAssignmentAdapter = new AssignmentAdapter(db, this);
