@@ -76,13 +76,6 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
         assignmentList = db.getAllAssignments();
         Collections.reverse(assignmentList);
         varAssignmentAdapter.setAssignment(assignmentList);
-
-        fab2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AddNewAssignment.newInstance().show(getSupportFragmentManager() ,AddNewAssignment.TAG);
-            }
-        });
     }
 
     @Override

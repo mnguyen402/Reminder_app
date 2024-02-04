@@ -1,5 +1,6 @@
 package com.example.remider_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -38,6 +39,13 @@ public class fragment_third extends Fragment {
                         .navigate(R.id.action_Third_Fragment_to_FirstFragment);
             }
         });
+        binding.fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AddNewAssignment.newInstance().show(getParentFragmentManager() ,AddNewAssignment.TAG);
+            }
+        });
+
     }
 
     @Override

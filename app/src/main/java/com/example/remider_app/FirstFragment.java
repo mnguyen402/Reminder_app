@@ -1,5 +1,6 @@
 package com.example.remider_app;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -56,7 +57,6 @@ public class FirstFragment extends Fragment {
                 NavHostFragment.findNavController(FirstFragment.this)
                         .navigate(R.id.action_FirstFragment_to_FourthFragment);
                 getActivity().recreate();
-
             }
         });
         binding.buttonClass.setOnClickListener(new View.OnClickListener() {
