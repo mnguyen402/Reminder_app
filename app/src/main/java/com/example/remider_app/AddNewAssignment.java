@@ -24,6 +24,7 @@ public class AddNewAssignment extends BottomSheetDialogFragment {
 
     public static final String TAG = "ActionBottomDialog";
     private EditText newAssignmentText;
+
     private Button newAssignmentSaveButton;
     private DatabaseHandler db;
 
@@ -46,6 +47,7 @@ public class AddNewAssignment extends BottomSheetDialogFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         newAssignmentText = requireView().findViewById(R.id.newAssignmentText);
+
         newAssignmentSaveButton = requireView().findViewById(R.id.newAssignmentButton);
 
 
