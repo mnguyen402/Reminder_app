@@ -17,7 +17,9 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@+id/newAssignmentButton"
         app:layout_constraintStart_toEndOf="@+id/textview_title"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18dp"
+        />
 
     <Button
         android:id="@+id/newAssignmentButton"
@@ -27,7 +29,9 @@
         android:text="ADD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20dp"
+        />
 
     <TextView
         android:id="@+id/textview_title"

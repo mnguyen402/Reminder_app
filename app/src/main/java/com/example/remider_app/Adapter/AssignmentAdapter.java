@@ -68,6 +68,7 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.Vi
         db.deleteTask(item.getId());
         assignmentList.remove(position);
         notifyItemRemoved(position);
+
     }
 
 

@@ -21,6 +21,7 @@
             android:paddingStart="8dp"
             android:buttonTint="@android:color/darker_gray"
             android:checked = "true"
+            android:textSize="20dp"
             />
 
     </RelativeLayout>

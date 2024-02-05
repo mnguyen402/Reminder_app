@@ -5,8 +5,9 @@
     android:id="@+id/nestedScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellow"
+    android:background="#ECE2D6"
     tools:context=".SecondFragment">
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab2"
@@ -27,8 +28,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ClassText"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="247dp"
+        android:layout_marginBottom="400dp"
         android:nestedScrollingEnabled="true"
+        android:scrollbarSize="10dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,6 +47,9 @@
         android:layout_marginTop="43dp"
         android:layout_marginEnd="307dp"
         android:text="@string/previous"
+        android:textSize="18sp"
+        android:backgroundTint="@android:color/darker_gray"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,10 +64,13 @@
         android:layout_marginStart="120dp"
         android:layout_marginTop="116dp"
         android:layout_marginEnd="121dp"
-        android:background="@color/purple"
+
+        android:fontFamily="sans-serif-smallcaps"
         android:text="Assignment"
-        android:textColor="@color/white"
-        android:textSize="32sp"
+        android:textAllCaps="false"
+        android:textColor="#FF0000"
+        android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -5,7 +5,7 @@
     android:id="@+id/nestedScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellow"
+    android:background="#ECE2D6"
     tools:context=".fragment_fourth">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -44,6 +44,9 @@
         android:layout_marginTop="43dp"
         android:layout_marginEnd="307dp"
         android:text="@string/previous"
+        android:textSize="18sp"
+        android:backgroundTint="@android:color/darker_gray"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,15 +56,16 @@
 
     <TextView
         android:id="@+id/ClassText"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
         android:layout_marginTop="116dp"
         android:layout_marginEnd="121dp"
-        android:background="@color/purple"
         android:text="@string/button_todo"
-        android:textColor="@color/white"
-        android:textSize="32sp"
+        android:textColor="#0FB1C0"
+        android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
