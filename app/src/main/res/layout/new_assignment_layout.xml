@@ -48,7 +48,7 @@
         android:id="@+id/Calendar_textview"
         android:layout_width="136dp"
         android:layout_height="37dp"
-        android:text="Calendar"
+        android:text="Date"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/Class"
         app:layout_constraintEnd_toStartOf="@+id/calendarTextView"
