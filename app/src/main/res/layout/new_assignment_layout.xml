@@ -13,6 +13,7 @@
         android:hint="New Assignment"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/calendarTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textview_title"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,6 +51,7 @@
         android:text="Calendar"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/Class"
+        app:layout_constraintEnd_toStartOf="@+id/calendarTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_title" />
 
@@ -76,7 +78,8 @@
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Class" />
+        app:layout_constraintStart_toEndOf="@+id/Class"
+        app:layout_constraintTop_toBottomOf="@+id/calendarTextView" />
 
     <CalendarView
         android:id="@+id/calendarView"
@@ -93,7 +96,9 @@
         android:id="@+id/calendarTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
         android:text="date"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/newClassText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Calendar_textview"
