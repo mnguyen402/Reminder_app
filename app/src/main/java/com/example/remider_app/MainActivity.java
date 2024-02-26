@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
 
     private AssignmentAdapter varAssignmentAdapter;
     private FloatingActionButton fab2;
-    private Button ButtonSecond;
     private List<AssignmentModel> assignmentList;
     private AppBarConfiguration appBarConfiguration;
     private DatabaseHandler db;

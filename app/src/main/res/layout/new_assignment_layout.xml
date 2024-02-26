@@ -2,24 +2,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="400sp"
+    android:layout_height="match_parent"
     android:padding="16dp">
 
     <EditText
         android:id="@+id/newAssignmentText"
-        android:layout_width="300dp"
-        android:layout_height="61dp"
+        android:layout_width="170dp"
+        android:layout_height="42dp"
 
-        android:layout_marginStart="28dp"
-
-        android:layout_marginTop="152dp"
-        android:hint="New Assignment | Due Date | Class"
+        android:hint="New Assignment"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toTopOf="@+id/newAssignmentButton"
-        app:layout_constraintStart_toEndOf="@+id/textview_title"
-        app:layout_constraintTop_toTopOf="parent"
         android:textSize="18dp"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/choose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textview_title"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/newAssignmentButton"
@@ -27,23 +24,70 @@
         android:layout_height="wrap_content"
 
         android:text="ADD"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="20dp"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textview_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="164dp"
         android:text="@string/textview_title"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/Calendar_textview"
         app:layout_constraintEnd_toStartOf="@+id/newAssignmentText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose"
+        app:layout_constraintBottom_toTopOf="@+id/newClassText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Calendar_textview"
+        app:layout_constraintTop_toBottomOf="@+id/newAssignmentText" />
+
+    <TextView
+        android:id="@+id/Calendar_textview"
+        android:layout_width="136dp"
+        android:layout_height="37dp"
+        android:text="Calendar"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/Class"
+        app:layout_constraintEnd_toStartOf="@+id/choose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_title" />
+
+    <TextView
+        android:id="@+id/Class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:text="Class"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/newClassText"
+        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Calendar_textview" />
+
+    <EditText
+        android:id="@+id/newClassText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:ems="10"
+        android:hint="Class"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Class"
+        app:layout_constraintTop_toBottomOf="@+id/choose"
+        app:layout_constraintVertical_bias="0.793" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

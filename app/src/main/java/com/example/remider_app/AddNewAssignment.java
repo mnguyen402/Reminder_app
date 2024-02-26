@@ -18,6 +18,7 @@ import androidx.core.content.ContextCompat;
 
 import com.example.remider_app.Model.AssignmentModel;
 import com.example.remider_app.Utils.DatabaseHandler;
+import com.example.remider_app.databinding.AssignmentLayoutBinding;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class AddNewAssignment extends BottomSheetDialogFragment {
@@ -26,6 +27,7 @@ public class AddNewAssignment extends BottomSheetDialogFragment {
     private EditText newAssignmentText;
 
     private Button newAssignmentSaveButton;
+    private Button calendarButton;
     private DatabaseHandler db;
 
     public static AddNewAssignment newInstance() {
@@ -50,6 +52,7 @@ public class AddNewAssignment extends BottomSheetDialogFragment {
 
         newAssignmentSaveButton = requireView().findViewById(R.id.newAssignmentButton);
 
+        calendarButton = requireView().findViewById(R.id.choose);
 
 
         boolean isUpdate = false;
@@ -108,8 +111,13 @@ public class AddNewAssignment extends BottomSheetDialogFragment {
                     db.insertAssignment(assignment);
 
                 }
-
                 dismiss();
+            }
+        });
+        calendarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }
