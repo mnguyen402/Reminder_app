@@ -37,7 +37,7 @@
             android:layout_width="150dp"
             android:layout_height="200dp"
             android:layout_marginTop="32dp"
-            android:backgroundTint="#9C27B0"
+            android:backgroundTint="#D3D3D3"
             android:text="@string/button_exam"
             android:textColor="@color/white"
             android:textSize="16sp"
