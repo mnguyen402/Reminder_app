@@ -27,7 +27,9 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
+        app:layout_constraintVertical_bias="0.084" />
 
     <TextView
         android:id="@+id/textview_title"
@@ -66,7 +68,7 @@
         android:id="@+id/Class"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="500dp"
         android:text="Class"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -79,7 +81,7 @@
         android:id="@+id/newClassText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="500dp"
         android:ems="10"
         android:hint="Class"
         android:inputType="text"
@@ -88,6 +90,17 @@
         app:layout_constraintStart_toEndOf="@+id/Class"
         app:layout_constraintTop_toBottomOf="@+id/choose"
         app:layout_constraintVertical_bias="0.793" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="297dp"
+        android:layout_height="319dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.173" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
