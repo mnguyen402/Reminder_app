@@ -23,6 +23,8 @@ import com.example.remider_app.Utils.DatabaseHandler;
 import com.example.remider_app.databinding.AssignmentLayoutBinding;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
+import org.w3c.dom.Text;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -32,6 +34,7 @@ public class AddNewAssignment extends BottomSheetDialogFragment {
 
     public static final String TAG = "ActionBottomDialog";
     private EditText newAssignmentText;
+    private EditText classText;
 
     private Button newAssignmentSaveButton;
     private Button addDateButton;
@@ -63,7 +66,7 @@ public class AddNewAssignment extends BottomSheetDialogFragment {
         newAssignmentSaveButton = requireView().findViewById(R.id.newAssignmentButton);
 
         dateText = view.getRootView().findViewById(R.id.dateText);
-
+        classText = view.getRootView().findViewById(R.id.newClassText);
         calendar = Calendar.getInstance();
 
         addDateButton = requireView().findViewById(R.id.addDatebutton);
@@ -113,7 +116,7 @@ public class AddNewAssignment extends BottomSheetDialogFragment {
         newAssignmentSaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String text = newAssignmentText.getText().toString();
+                String text = newAssignmentText.getText().toString() + "|" + dateText.getText().toString() + "|" + classText.getText().toString();
                 if(finalIsUpdate) {
                     db.updateTask(bundle.getInt("id"), text);
                 }
