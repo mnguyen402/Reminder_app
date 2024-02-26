@@ -35,7 +35,7 @@ public class AddNewAssignment extends BottomSheetDialogFragment {
 
     private Button newAssignmentSaveButton;
     private Button addDateButton;
-    private TextView calendarTextview;
+    private EditText dateText;
 
     private CalendarView calendarView;
     Calendar calendar = Calendar.getInstance();
@@ -62,7 +62,7 @@ public class AddNewAssignment extends BottomSheetDialogFragment {
 
         newAssignmentSaveButton = requireView().findViewById(R.id.newAssignmentButton);
 
-        calendarTextview = view.getRootView().findViewById(R.id.calendarTextView);
+        dateText = view.getRootView().findViewById(R.id.dateText);
 
         calendar = Calendar.getInstance();
 
@@ -130,9 +130,9 @@ public class AddNewAssignment extends BottomSheetDialogFragment {
         addDateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DateFormat df = new SimpleDateFormat("dd, MM, yyyy");
+                DateFormat df = new SimpleDateFormat("dd/ MM/ yyyy");
                 String dateToday = df.format(Calendar.getInstance().getTime());
-                calendarTextview.setText(dateToday);
+                dateText.setText(dateToday);
             }
         });
     }
