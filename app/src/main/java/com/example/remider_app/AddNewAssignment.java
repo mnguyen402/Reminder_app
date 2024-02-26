@@ -11,7 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
@@ -21,13 +23,22 @@ import com.example.remider_app.Utils.DatabaseHandler;
 import com.example.remider_app.databinding.AssignmentLayoutBinding;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 public class AddNewAssignment extends BottomSheetDialogFragment {
 
     public static final String TAG = "ActionBottomDialog";
     private EditText newAssignmentText;
 
     private Button newAssignmentSaveButton;
-    private Button calendarButton;
+    private Button addDateButton;
+    private TextView calendarTextview;
+
+    private CalendarView calendarView;
+    Calendar calendar = Calendar.getInstance();
     private DatabaseHandler db;
 
     public static AddNewAssignment newInstance() {
@@ -36,7 +47,6 @@ public class AddNewAssignment extends BottomSheetDialogFragment {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -52,8 +62,11 @@ public class AddNewAssignment extends BottomSheetDialogFragment {
 
         newAssignmentSaveButton = requireView().findViewById(R.id.newAssignmentButton);
 
-        calendarButton = requireView().findViewById(R.id.choose);
+        calendarTextview = view.getRootView().findViewById(R.id.calendarTextView);
 
+        calendar = Calendar.getInstance();
+
+        addDateButton = requireView().findViewById(R.id.addDatebutton);
 
         boolean isUpdate = false;
         final Bundle bundle = getArguments();
@@ -114,10 +127,12 @@ public class AddNewAssignment extends BottomSheetDialogFragment {
                 dismiss();
             }
         });
-        calendarButton.setOnClickListener(new View.OnClickListener() {
+        addDateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                DateFormat df = new SimpleDateFormat("dd, MM, yyyy");
+                String dateToday = df.format(Calendar.getInstance().getTime());
+                calendarTextview.setText(dateToday);
             }
         });
     }
@@ -129,11 +144,8 @@ public class AddNewAssignment extends BottomSheetDialogFragment {
         Activity activity = getActivity();
         if (activity instanceof DialogCloseListener) {
             ((DialogCloseListener) activity).handleDialogClose(dialog);
-
         }
-
     }
-
 
 }
 

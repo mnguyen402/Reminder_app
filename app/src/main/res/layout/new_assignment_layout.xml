@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="18dp">
 
     <EditText
         android:id="@+id/newAssignmentText"
@@ -13,7 +13,6 @@
         android:hint="New Assignment"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/choose"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textview_title"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,13 +22,14 @@
         android:layout_width="135dp"
         android:layout_height="wrap_content"
 
+        android:layout_marginEnd="69dp"
         android:text="ADD"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addDatebutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView"
-        app:layout_constraintVertical_bias="0.084" />
+        app:layout_constraintVertical_bias="0.086" />
 
     <TextView
         android:id="@+id/textview_title"
@@ -43,16 +43,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/choose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Choose"
-        app:layout_constraintBottom_toTopOf="@+id/newClassText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Calendar_textview"
-        app:layout_constraintTop_toBottomOf="@+id/newAssignmentText" />
-
     <TextView
         android:id="@+id/Calendar_textview"
         android:layout_width="136dp"
@@ -60,7 +50,6 @@
         android:text="Calendar"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/Class"
-        app:layout_constraintEnd_toStartOf="@+id/choose"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_title" />
 
@@ -87,9 +76,7 @@
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Class"
-        app:layout_constraintTop_toBottomOf="@+id/choose"
-        app:layout_constraintVertical_bias="0.793" />
+        app:layout_constraintStart_toEndOf="@+id/Class" />
 
     <CalendarView
         android:id="@+id/calendarView"
@@ -101,6 +88,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.173" />
+
+    <TextView
+        android:id="@+id/calendarTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="date"
+        app:layout_constraintBottom_toTopOf="@+id/newClassText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Calendar_textview"
+        app:layout_constraintTop_toBottomOf="@+id/newAssignmentText" />
+
+    <Button
+        android:id="@+id/addDatebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="addDate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toEndOf="@+id/newAssignmentButton"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
+        app:layout_constraintVertical_bias="0.086" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
