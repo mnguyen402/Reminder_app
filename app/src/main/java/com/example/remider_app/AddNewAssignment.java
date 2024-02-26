@@ -116,7 +116,7 @@ public class AddNewAssignment extends BottomSheetDialogFragment {
         newAssignmentSaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String text = newAssignmentText.getText().toString() + "|" + dateText.getText().toString() + "|" + classText.getText().toString();
+                String text = newAssignmentText.getText().toString() + " | " + dateText.getText().toString() + " | " + classText.getText().toString();
                 if(finalIsUpdate) {
                     db.updateTask(bundle.getInt("id"), text);
                 }
